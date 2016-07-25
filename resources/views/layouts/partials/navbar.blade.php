@@ -1,5 +1,5 @@
 <div id="navbar-blue">
-    <div class="navbar navbar-ct-blue" role="navigation" style="border-radius: 0px !important;">
+    <div class="navbar navbar-ct-blue" role="navigation" style="border-radius: 0px !important; margin-bottom: 0px;">
         <div class="container-fluid">
 
             <div class="container">

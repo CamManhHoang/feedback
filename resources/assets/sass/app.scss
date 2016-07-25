@@ -1,2 +1,6 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome";
+#admin-sidebar {
+  background-color: rgb(52, 73, 94) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
