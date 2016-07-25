@@ -1,45 +1,76 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
+<div id="navbar-blue">
+    <div class="navbar navbar-ct-blue" role="navigation" style="border-radius: 0px !important;">
+        <div class="container-fluid">
 
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-brand-logo" href="/">
+                        <div class="logo">
+                            <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
+                        </div>
+                        <div class="brand"> Feedback System </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
+                                <i class="pe-7s-search"></i>
+                                <p>Search</p>
+                            </a>
+                        </li>
 
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                Laravel
-            </a>
+                        @if (Auth::guest())
+                            <li>
+                                <a href="/login">
+                                    <i class="pe-7s-user"></i>
+                                    <p>Login</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/register">
+                                    <i class="pe-7s-add-user"></i>
+                                    <p>Register</p>
+                                </a>
+                            </li>
+                        @else
+                            <li>
+                                <a href="#">
+                                    <i class="pe-7s-mail">
+                                        <span class="label">23</span>
+                                    </i>
+                                    <p>Messages</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-user"></i>
+                                    <p>Account <b class="caret"></b></p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                    <form class="navbar-form navbar-right navbar-search-form" role="search">
+                        <div class="form-group">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </div>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li><a href="{{ url('/home') }}">Home</a></li>
-            </ul>
+    </div><!--  end navbar -->
 
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                        </ul>
-                    </li>
-                @endif
-            </ul>
-        </div>
-    </div>
-</nav>
+</div> <!-- end menu-dropdown -->

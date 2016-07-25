@@ -9,20 +9,25 @@
 
     <!-- Styles -->
     {!! Html::style('css/app.css') !!}
+    {!! Html::style('css/pe-icon-7-stroke.css') !!}
+    {!! Html::style('css/ct-navbar.css') !!}
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+
     @yield(('style'))
 
 </head>
 <body id="app-layout">
 
-<!-- Navigation Bar -->
-@include('layouts.partials.navbar')
+    <!-- Navigation Bar -->
+    @include('layouts.partials.navbar')
 
-        <!-- Content Section -->
-@yield('content')
+    <!-- Content Section -->
+    @yield('content')
 
-        <!-- JavaScripts -->
-{!! Html::script('js/app.js') !!}
+    <!-- JavaScripts -->
+    {!! Html::script('js/app.js') !!}
+    <script src="js/ct-navbar.js"></script>
+    @yield('script')
 
-@yield('script')
 </body>
 </html>
