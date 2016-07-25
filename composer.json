@@ -11,7 +11,8 @@
         "laravel/socialite": "2.0.18",
         "guzzlehttp/guzzle": "~5.0",
         "doctrine/dbal": "^2.5",
-        "greggilbert/recaptcha": "dev-master"
+        "greggilbert/recaptcha": "dev-master",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
