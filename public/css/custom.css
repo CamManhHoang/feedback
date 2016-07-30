@@ -1,0 +1,91 @@
+#content .question_list {
+    padding: 30px 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#content .answers_total, a:hover.b_askquestions {
+    background: #82b541;
+    cursor: pointer;
+}
+
+#content .answers_total {
+    float: left;
+    width: 65px;
+    height: 65px;
+    font-size: 14px;
+    text-align: center;
+    line-height: normal;
+    color: #fff;
+    margin-right: 25px;
+}
+
+#content .answers_total, a.b_askquestions, #sidebar .subscribe .submit, .btn_input_highlight, .btn_input_normal, input#submit {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#content .answers_total a {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 8px;
+    color: #fff;
+}
+
+#content .question_list h3 {
+    margin: 0;
+    font-size: 18px;
+    float: left;
+    padding-bottom: 10px;
+}
+
+#content .question_list p {
+    float: left;
+    max-width: 86%;
+    width: 100%;
+    font-size: 14px;
+    border-bottom: none;
+}
+
+#content .question_list p span {
+    float: left;
+    margin-right: 20px;
+}
+
+.btn_input_highlight:hover, input#submit:hover, #content .question_list:hover .answers_total, #content .question_list:hover .answers_total a, a.b_askquestions, .pagination .on, .pagination a:hover {
+    color: #79341a;
+}
+.btn_input_highlight:hover, input#submit:hover, #content .question_list:hover .answers_total, a.b_askquestions, .pagination .on, .pagination a:hover {
+    background: #f5c142;
+}
+a.b_askquestions {
+    margin-top: 4px;
+    display: block;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+#content .answers_total, a.b_askquestions, #sidebar .subscribe .submit, .btn_input_highlight, .btn_input_normal, input#submit {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#content .question_list h3 a {
+    color: #333;
+}
+
+#content .question_list h3 a:hover {
+    color: #82b541;
+}
+
+.text-area-form {
+    height: 100px !important;
+}

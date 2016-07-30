@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->integer('session_id')->unsigned()->index();
             $table->string('content');
+            $table->timestamps();
         });
     }
 

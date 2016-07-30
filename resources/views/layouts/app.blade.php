@@ -8,9 +8,9 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    {!! Html::style('css/app.css') !!}
-    {!! Html::style('css/pe-icon-7-stroke.css') !!}
-    {!! Html::style('css/ct-navbar.css') !!}
+    {!! Html::style('/css/app.css') !!}
+    {!! Html::style('/css/pe-icon-7-stroke.css') !!}
+    {!! Html::style('/css/ct-navbar.css') !!}
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
     @yield(('style'))
@@ -25,8 +25,9 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    {!! Html::script('js/app.js') !!}
-    <script src="js/ct-navbar.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.9.1.js"></script>
+    {!! Html::script('/js/app.js') !!}
+    <script src="/js/ct-navbar.js"></script>
     @yield('script')
 
 </body>

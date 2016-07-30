@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('style')
-    <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <link href="/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/custom.css">
 @endsection
 
 @section('content')
@@ -12,25 +13,22 @@
             <div class="sidebar-wrapper" id="admin-sidebar">
 
                 <ul class="nav">
-                    <li>
-                        <a href="dashboard.html">
-                            <i class="pe-7s-graph"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="user.html">
-                            <i class="pe-7s-user"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="table.html">
-                            <i class="pe-7s-note2"></i>
-                            <p>Table List</p>
-                        </a>
-                    </li>
+
+                    @if (Auth::check() && Auth::user()->is_professor())
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="pe-7s-graph"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/preside/sessions">
+                                <i class="pe-7s-note2"></i>
+                                <p>Sessions List</p>
+                            </a>
+                        </li>
+                    @endif
                     <li>
                         <a href="typography.html">
                             <i class="pe-7s-news-paper"></i>
@@ -65,14 +63,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <div class="card">
-                                <div class="header text-center">
-                                    <h4 class="title">Admin Component</h4>
-                                </div>
-                            </div>
+                            @yield('component')
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -83,5 +76,5 @@
 
 @section('script')
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="js/light-bootstrap-dashboard.js"></script>
+    <script src="/js/light-bootstrap-dashboard.js"></script>
 @endsection

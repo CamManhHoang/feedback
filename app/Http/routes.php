@@ -19,4 +19,14 @@ Route::auth();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::resource('sessions', 'SessionController');
+Route::group(['prefix' => 'preside', 'middleware' => 'session'], function() {
+    Route::resource('sessions', 'SessionController');
+});
+
+Route::resource('questions', 'QuestionController');
+
+Route::get('sessions', 'QuestionController@listAllSessions');
+
+Route::group(['prefix' => 'sessions', 'middleware' => 'auth'], function() {
+    Route::get('/{id}/questions', 'QuestionController@index');
+});

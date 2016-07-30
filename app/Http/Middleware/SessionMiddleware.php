@@ -28,7 +28,7 @@ class SessionMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->user()->is_professor()) {
+        if ($this->auth->user() && $this->auth->user()->is_professor()) {
             return $next($request);
         }
 

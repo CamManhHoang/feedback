@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Session;
 use App\Http\Requests;
+use App\Http\Requests\SessionRequest;
 
 class SessionController extends Controller
 {
@@ -15,6 +16,39 @@ class SessionController extends Controller
 
     public function index()
     {
-        return 'hello';
+        $sessions = Session::all();
+
+        return view('sessions.index', ['sessions' => $sessions]);
+    }
+
+    public function create()
+    {
+        return view('sessions.create');
+    }
+
+    public function store(SessionRequest $request)
+    {
+        $session = new Session();
+
+        $session->name = $request->name;
+        $session->user_id = $request->user_id;
+
+        if ($request->has('active')) {
+            $session->active = 1;
+        }
+
+        $session->save();
+
+        $request->session()->flash('success', 'New session has been created!');
+
+        return back();
+
+    }
+
+    public function show($id)
+    {
+        $session = Session::findOrFail($id);
+
+        return view('sessions.show', compact('session'));
     }
 }
