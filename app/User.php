@@ -25,4 +25,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function sessions()
+    {
+        return $this->hasMany(Session::class);
+    }
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
+
+    public function is_professor()
+    {
+        return $this->hasRole('Professor');
+    }
+
+    public function is_admin()
+    {
+        return $this->hasRole('Admin');
+    }
 }
