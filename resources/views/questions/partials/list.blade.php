@@ -37,11 +37,11 @@
             <a href="">{{ $question->content }}</a>
         </h3>
         <p>
-            <span class="user">
+            <span class="user"><i class="fa fa-user"></i>
                 Asked by: <strong>{{ $question->user->name }}</strong>
             </span>
 
-            <span>
+            <span><i class="fa fa-clock-o"></i>
                 Time: <strong>{{ $question->created_at->diffForHumans() }}</strong>
             </span>
         </p>

@@ -28,10 +28,10 @@
                 <tbody>
                     @foreach ($sessions as $session)
                         <tr>
-                            <td><a href="{{url('/preside/sessions/'.$session->id)}}" >{{$session->name}}</a></td>
+                            <td><a href="{{url('/sessions/' . $session->id . '/questions')}}" >{{$session->name}}</a></td>
                             <td>{{ $session->active ? 'Yes' : 'No' }}</td>
                             <td>{{ $session->user->name }}</td>
-                            <td>2</td>
+                            <td>{{ $session->questions->count() }}</td>
                         </tr>
                     @endforeach
                 </tbody>

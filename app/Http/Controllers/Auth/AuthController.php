@@ -69,4 +69,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    protected function authenticated($request, $user)
+    {
+        if($user->hasRole('Admin') || $user->hasRole('Professor')) {
+            return redirect()->intended('/dashboard');
+        }
+
+        return redirect()->intended('/');
+    }
 }

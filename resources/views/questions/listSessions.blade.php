@@ -15,7 +15,7 @@
         <div class="row">
             <div id="content">
 
-                <h1>All Sessions</h1>
+                <h2>All Sessions</h2>
 
                 @foreach ($sessions as $session)
 
@@ -28,8 +28,12 @@
                             <a href="{{ url('/sessions/' . $session->id . '/questions') }}"> {{ $session->name }}</a>
                         </h3>
                         <p>
-                            <span class="user">Started by: <strong>{{ $session->user->name }}</strong></span>
-                            <span class="pcate"> Active: <strong>{{ $session->active ? 'Yes' : 'No' }}</strong></span>
+                            <span class="user"><i class="fa fa-user"></i>
+                                Started by: <strong>{{ $session->user->name }}</strong>
+                            </span>
+                            <span><i class="fa fa-check"></i>
+                                Active: <strong>{{ $session->active ? 'Yes' : 'No' }}</strong>
+                            </span>
                         </p>
 
 

@@ -20,7 +20,9 @@ Route::auth();
 Route::get('/dashboard', 'DashboardController@index');
 
 Route::group(['prefix' => 'preside', 'middleware' => 'session'], function() {
-    Route::resource('sessions', 'SessionController');
+    Route::resource('sessions', 'SessionController',
+        ['except' => ['show']
+    ]);
 });
 
 Route::resource('questions', 'QuestionController');

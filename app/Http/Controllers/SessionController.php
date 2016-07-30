@@ -44,11 +44,4 @@ class SessionController extends Controller
         return back();
 
     }
-
-    public function show($id)
-    {
-        $session = Session::findOrFail($id);
-
-        return view('sessions.show', compact('session'));
-    }
 }

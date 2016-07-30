@@ -14,45 +14,22 @@
 
                 <ul class="nav">
 
+                    <li class="{{ Request::is('dashboard*') ? 'active' : '' }}">
+                        <a href="/dashboard">
+                            <i class="pe-7s-graph"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+
                     @if (Auth::check() && Auth::user()->is_professor())
-                        <li>
-                            <a href="dashboard.html">
-                                <i class="pe-7s-graph"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
+                        <li class="{{ Request::is('preside/sessions*') ? 'active' : '' }}">
                             <a href="/preside/sessions">
                                 <i class="pe-7s-note2"></i>
                                 <p>Sessions List</p>
                             </a>
                         </li>
                     @endif
-                    <li>
-                        <a href="typography.html">
-                            <i class="pe-7s-news-paper"></i>
-                            <p>Typography</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons.html">
-                            <i class="pe-7s-science"></i>
-                            <p>Icons</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maps.html">
-                            <i class="pe-7s-map-marker"></i>
-                            <p>Maps</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notifications.html">
-                            <i class="pe-7s-bell"></i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
