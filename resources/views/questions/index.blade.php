@@ -29,6 +29,15 @@
     <script>
         jQuery(document).ready(function(){
             $('.toggle-form').hide();
+
+            $(".reply_btn").click(function () {
+                $(this).parent().parent().children('.reply-form').show();
+            });
+
+            $(".cancel_btn").click(function(){
+                $(this).parent().parent().hide();
+            });
+
             jQuery('#hideshow').on('click', function(event) {
                 jQuery('.toggle-form').toggle('show');
             });

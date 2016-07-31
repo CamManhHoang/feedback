@@ -32,3 +32,5 @@ Route::get('sessions', 'QuestionController@listAllSessions');
 Route::group(['prefix' => 'sessions', 'middleware' => 'auth'], function() {
     Route::get('/{id}/questions', 'QuestionController@index');
 });
+
+Route::resource('answers', 'AnswerController');

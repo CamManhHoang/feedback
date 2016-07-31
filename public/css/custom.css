@@ -90,3 +90,23 @@ a.b_askquestions {
     height: 100px !important;
 }
 
+.btn-circle {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.reply-form {
+    display: none;
+}
+
+.button-group {
+    margin-left: 300px !important;
+}
