@@ -27,7 +27,7 @@
                         <h3>
                             <a href="{{ url('/sessions/' . $session->id . '/questions') }}"> {{ $session->name }}</a>
                         </h3>
-                        <p>
+                        <p class="questions-list">
                             <span class="user"><i class="fa fa-user"></i>
                                 Started by: <strong>{{ $session->user->name }}</strong>
                             </span>

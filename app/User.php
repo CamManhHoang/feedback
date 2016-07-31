@@ -45,4 +45,16 @@ class User extends Authenticatable
     {
         return $this->hasRole('Admin');
     }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function getGravatarAttribute()
+    {
+        $hash = md5(strtolower(trim($this->attributes['email'])));
+
+        return "http://www.gravatar.com/avatar/$hash";
+    }
 }
