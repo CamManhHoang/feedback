@@ -10,6 +10,12 @@ use App\Http\Requests\QuestionRequest;
 
 class QuestionController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => 'store']);
+    }
+
     public function index($id)
     {
         $session = Session::findOrFail($id);

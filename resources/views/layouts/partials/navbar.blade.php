@@ -43,6 +43,12 @@
                             </li>
                         @else
                             <li>
+                                <a href="/sessions">
+                                    <i class="pe-7s-news-paper"></i>
+                                    <p>Sessions</p>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#">
                                     <i class="pe-7s-mail">
                                         <span class="label">23</span>
