@@ -1,7 +1,7 @@
 @extends('auth.layouts')
 
 @section('title')
-    <title>{{ trans('auth.reset_password_title') }}</title>
+    <title>Reset Mật Khẩu</title>
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@
                 @include('layouts.partials.errors')
 
                 <div class="section-title">
-                    <h3>{{ trans('auth.forget_password_heading') }}</h3>
+                    <h3>QUÊN MẬT KHẨU</h3>
                 </div>
 
                 <div class="forgot-content">
@@ -37,8 +37,8 @@
                         </div>
 
                         <div class="forget-form-action clearfix">
-                            <a class="btn btn-success pull-left blue-btn" href="/login"><i class="icon-chevron-left"></i>&nbsp;&nbsp;{{ trans('auth.back') }}  </a>
-                            <button type="submit" class="btn btn-success pull-right green-btn">{{ trans('auth.submit') }} &nbsp;&nbsp; <i class="icon-chevron-right"></i></button>
+                            <a class="btn btn-success pull-left blue-btn" href="/login"><i class="icon-chevron-left"></i>&nbsp;&nbsp;Quay lại  </a>
+                            <button type="submit" class="btn btn-success pull-right green-btn">Gửi &nbsp;&nbsp; <i class="icon-chevron-right"></i></button>
                         </div>
                     </form>
                 </div>

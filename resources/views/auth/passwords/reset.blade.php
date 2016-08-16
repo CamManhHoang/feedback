@@ -1,7 +1,7 @@
 @extends('auth.layouts')
 
 @section('title')
-    <title>{{ trans('auth.reset_password_title') }}</title>
+    <title>Reset Mật Khẩu</title>
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@
                 @include('layouts.partials.errors')
 
                 <div class="section-title">
-                    <h3>{{ trans('auth.reset_password_heading') }}</h3>
+                    <h3>QUÊN MẬT KHẨU</h3>
                 </div>
 
                 <div class="forgot-content">

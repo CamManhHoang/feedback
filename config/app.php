@@ -159,6 +159,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

@@ -1,9 +1,9 @@
 @include('layouts.partials.errors')
 @include('layouts.partials.success')
 
-<div class="row" xmlns="http://www.w3.org/1999/html">
+<div class="row">
     <div class="col-md-6">
-        <a class="b_askquestions" id='hideshow' value='show/hide'>Ask a Question</a>
+        <a class="b_askquestions" id='hideshow' value='show/hide'>Đặt Một Câu Hỏi</a>
 
         {!! Form::open(['route' => 'questions.store', 'method' => 'POST', 'class' => 'form-horizontal toggle-form']) !!}
 
@@ -11,7 +11,7 @@
         {{ Form::hidden('session_id', $session->id) }}
 
         <div class="form-group">
-            {{ Form::label('name', 'Content', ['class' => 'col-md-3 control-label']) }}
+            {{ Form::label('name', 'Nội dung', ['class' => 'col-md-3 control-label']) }}
             <div class="col-md-8">
                 {!! Form::textarea('content', null, ['class' => 'form-control text-area-form', 'value' => old('session')]) !!}
             </div>
@@ -19,7 +19,7 @@
 
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
-                {{ Form::button('<i class="fa fa-plus-circle"></i> ' . 'Create', ['type' => 'submit', 'class' => 'btn btn-primary']) }}
+                {{ Form::button('<i class="fa fa-plus-circle"></i> ' . 'Đặt câu hỏi', ['type' => 'submit', 'class' => 'btn btn-primary']) }}
             </div>
         </div>
 
@@ -38,11 +38,11 @@
         </h3>
         <p class="questions-list">
             <span class="user"><i class="fa fa-user"></i>
-                Asked by: <strong>{{ $question->user->name }}</strong>
+                Người hỏi: <strong>Ẩn danh</strong>
             </span>
 
             <span><i class="fa fa-clock-o"></i>
-                Time: <strong>{{ $question->created_at->diffForHumans() }}</strong>
+                Thời gian: <strong>{{ $question->created_at->diffForHumans() }}</strong>
             </span>
 
         </p>
@@ -50,7 +50,7 @@
         <section class="comment-block">
             <div class="comment-title">
                 <button type="button" class="reply_btn btn btn-info btn-circle text-uppercase" id="reply"
-                        value='hide/show'><i class="fa fa-share"></i> Reply
+                        value='hide/show'><i class="fa fa-share"></i> Trả lời
                 </button>
             </div>
 
@@ -60,15 +60,15 @@
             {{ Form::hidden('question_id', $question->id) }}
 
             <div class="form-group">
-                {{ Form::label('content', 'Content', ['class' => 'col-md-3 control-label']) }}
+                {{ Form::label('content', 'Nội dung', ['class' => 'col-md-3 control-label']) }}
                 <div class="col-md-8">
                     {!! Form::textarea('content', null, ['class' => 'form-control text-area-form', 'value' => old('session')]) !!}
                 </div>
             </div>
 
             <div class="form-group button-group">
-                {{ Form::button('<i class="fa fa-plus"></i> ' . 'Post Answer', ['type' => 'submit', 'class' => 'btn btn-primary']) }}
-                {{ Form::button('<i class="fa fa-times"></i> ' . 'Cancel', ['class' => 'cancel_btn btn btn-danger', 'value' => 'Cancel']) }}
+                {{ Form::button('<i class="fa fa-plus"></i> ' . 'Trả lời', ['type' => 'submit', 'class' => 'btn btn-primary']) }}
+                {{ Form::button('<i class="fa fa-times"></i> ' . 'Hủy bỏ', ['class' => 'cancel_btn btn btn-danger', 'value' => 'Cancel']) }}
             </div>
 
             {!! Form::close() !!}

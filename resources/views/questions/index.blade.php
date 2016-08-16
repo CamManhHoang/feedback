@@ -15,7 +15,7 @@
         <div class="row">
                 <div id="content">
 
-                    <h2>Questions in {{ $session->name }}</h2>
+                    <h2>Câu hỏi trong {{ $session->name }}</h2>
 
                     @include('questions.partials.list')
 

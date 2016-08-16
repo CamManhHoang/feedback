@@ -15,7 +15,7 @@
                         <div class="logo">
                             <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
                         </div>
-                        <div class="brand"> Feedback System </div>
+                        <div class="brand"> Hệ thống hỏi đáp trực tuyến UET</div>
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,7 +24,7 @@
                         <li>
                             <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                                 <i class="pe-7s-search"></i>
-                                <p>Search</p>
+                                <p>Tìm kiếm</p>
                             </a>
                         </li>
 
@@ -32,20 +32,20 @@
                             <li>
                                 <a href="/login">
                                     <i class="pe-7s-user"></i>
-                                    <p>Login</p>
+                                    <p>Đăng nhập</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="/register">
                                     <i class="pe-7s-add-user"></i>
-                                    <p>Register</p>
+                                    <p>Đăng ký</p>
                                 </a>
                             </li>
                         @else
                             <li>
                                 <a href="/sessions">
                                     <i class="pe-7s-news-paper"></i>
-                                    <p>Sessions</p>
+                                    <p>Phiên hỏi đáp</p>
                                 </a>
                             </li>
                             <li>
@@ -53,16 +53,16 @@
                                     <i class="pe-7s-mail">
                                         <span class="label">23</span>
                                     </i>
-                                    <p>Messages</p>
+                                    <p>Tin nhắn</p>
                                 </a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="pe-7s-user"></i>
-                                    <p>Account <b class="caret"></b></p>
+                                    <p>Tài khoản <b class="caret"></b></p>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Đăng xuất</a></li>
                                 </ul>
                             </li>
                         @endif

@@ -12,7 +12,8 @@
         "guzzlehttp/guzzle": "~5.0",
         "doctrine/dbal": "^2.5",
         "greggilbert/recaptcha": "dev-master",
-        "zizaco/entrust": "5.2.x-dev"
+        "zizaco/entrust": "5.2.x-dev",
+        "barryvdh/laravel-ide-helper": "^2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
